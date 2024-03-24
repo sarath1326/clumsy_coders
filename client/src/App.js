@@ -1,7 +1,7 @@
 
 
 import React from 'react'
-import Home from "./compontns/home"
+import Home from "./compontns/home/Home"
 
 function App() {
   return (
