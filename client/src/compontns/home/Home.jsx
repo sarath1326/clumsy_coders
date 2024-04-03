@@ -3,6 +3,7 @@
 import React from 'react'
 import Nave from "../nave/Nave"
 import { motion } from "framer-motion"
+import  {Swiper} from "swiper"
 
 
 const fadeAnimation = {
@@ -58,10 +59,12 @@ function Home() {
 
         </div>
 
-        <div className=' w-full h-[800px] sm:w-[50%] sm:h-[100%] '>
+       <div className='w-[50%] h-[400px] sm:h-[500px] bg-white ' >
 
 
-        </div>
+
+
+       </div>
 
 
       </div>

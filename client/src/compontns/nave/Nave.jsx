@@ -10,11 +10,11 @@ import { motion } from "framer-motion"
 function Nave() {
 
     const [nav, setnav] = useState(false)
-    const [navopt,setnavopt]=useState([
-        {text:"Home"},
-        {text:"About"},
-        {text:"Projects"},
-        {text:"Contact"}
+    const [navopt, setnavopt] = useState([
+        { text: "Home" },
+        { text: "About" },
+        { text: "Projects" },
+        { text: "Contact" }
     ])
 
 
@@ -63,27 +63,27 @@ function Nave() {
                         <div className='flex gap-20 ml-[200px] font-Poppins text-[15px]'>
 
                             {
-                                navopt.map((obj,index)=>(
+                                navopt.map((obj, index) => (
 
-                                    <motion.span 
-                                    initial={{opacity:0,x:-100}}
-                                    animate={{opacity:1,x:0}}
-                                    transition={{duration:0.3  }}
-                                    
-                                    className='cursor-pointer hover:text-red-600' > 
-                                    
-                                    {obj.text} 
-                                    
+                                    <motion.span
+                                        initial={{ opacity: 0, x: -100 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.3 }}
+
+                                        className='cursor-pointer hover:text-red-600' >
+
+                                        {obj.text}
+
                                     </motion.span>
-                                      
+
                                 ))
                             }
 
-                            
 
-                            
 
-                            
+
+
+
 
 
                         </div>
@@ -107,7 +107,13 @@ function Nave() {
 
 
 
-                <div className='w-full h-[500px] fixed top-0 '>
+                <motion.div
+
+                    initial={{ opacity: 0, y: -100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+
+                    className='w-full h-[500px] fixed top-0 '>
 
                     <div className='w-full h-[100%] bg-yellow-300  rounded-b-[40px]' >
 
@@ -122,13 +128,22 @@ function Nave() {
 
 
 
-                            <p> Home </p>
+                            {
+                                navopt.map((obj, index) => (
 
-                            <p> About </p>
+                                    <motion.span
+                                        initial={{ opacity: 0, y: -100 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.9 }}
 
-                            <p> Projects </p>
+                                        className='cursor-pointe' >
 
-                            <p> Contact </p>
+                                        {obj.text}
+
+                                    </motion.span>
+
+                                ))
+                            }
 
 
                         </div>
@@ -137,7 +152,7 @@ function Nave() {
 
                     </div>
 
-                </div>
+                </motion.div>
 
 
 
