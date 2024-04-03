@@ -59,7 +59,7 @@ function Home() {
 
         </div>
 
-       <div className='w-[50%] h-[400px] sm:h-[500px] bg-white ' >
+       <div className='w-[100%] sm:w-[50%] h-[500px] sm:h-[500px] bg-green-500 ' >
 
 
 
