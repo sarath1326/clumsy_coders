@@ -7,7 +7,8 @@ module.exports = {
     extend: {},
     fontFamily:{
       Rakkas:['Rakkas'],
-      Arimo:['Arimo']
+      Arimo:['Arimo'],
+      Poppins:['Poppins']
     }
   },
   plugins: [],

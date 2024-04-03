@@ -4,11 +4,18 @@ import React from 'react'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from 'react';
+import { motion } from "framer-motion"
 
 
 function Nave() {
 
     const [nav, setnav] = useState(false)
+    const [navopt,setnavopt]=useState([
+        {text:"Home"},
+        {text:"About"},
+        {text:"Projects"},
+        {text:"Contact"}
+    ])
 
 
 
@@ -19,11 +26,12 @@ function Nave() {
 
             <div className='w-full h-[100px] bg-[#16161d] flex text-[#00C0FF]  ' >
 
-                <div className='w-[50%] h-[100%] flex items-center  pl-10 ' >
+                <div className='w-[50%] h-[100%] flex items-center pl-5 sm:pl-10 ' >
 
                     <p className='font-Rakkas' >
 
                         <span className='text-[#00C0FF] text-[25px] ' > Clumsy  </span>
+
 
                         <span className='text-[#FF204E] text-[25px] '  > Coders </span>
 
@@ -52,15 +60,30 @@ function Nave() {
                     {/* nave option div lapview */}
                     <div className='hidden sm:block' >
 
-                        <div className='   flex gap-20 ml-[200px] font-Arimo text-[17px]'>
+                        <div className='flex gap-20 ml-[200px] font-Poppins text-[15px]'>
 
-                            <span className='cursor-pointer' > Home  </span>
+                            {
+                                navopt.map((obj,index)=>(
 
-                            <span className='cursor-pointer' > About  </span>
+                                    <motion.span 
+                                    initial={{opacity:0,x:-100}}
+                                    animate={{opacity:1,x:0}}
+                                    transition={{duration:0.3  }}
+                                    
+                                    className='cursor-pointer hover:text-red-600' > 
+                                    
+                                    {obj.text} 
+                                    
+                                    </motion.span>
+                                      
+                                ))
+                            }
 
-                            <span className='cursor-pointer'> Projects </span>
+                            
 
-                            <span className='text-red-500 cursor-pointer ' > Contact </span>
+                            
+
+                            
 
 
                         </div>
@@ -84,7 +107,7 @@ function Nave() {
 
 
 
-                <div className='w-full h-[500px] fixed top-0  ' >
+                <div className='w-full h-[500px] fixed top-0 '>
 
                     <div className='w-full h-[100%] bg-yellow-300  rounded-b-[40px]' >
 
@@ -97,21 +120,15 @@ function Nave() {
 
                         <div className='w-full h-[300px]  grid content-center justify-center gap-10  text-[20px] font-Arimo font-bold ' >
 
-                           
-
-                                <p> Home </p>
-
-                                <p> About </p>
-
-                                <p> Projects </p>
-
-                                <p> Contact </p>
 
 
+                            <p> Home </p>
 
-                          
+                            <p> About </p>
 
+                            <p> Projects </p>
 
+                            <p> Contact </p>
 
 
                         </div>
