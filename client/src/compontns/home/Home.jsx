@@ -43,7 +43,7 @@ function Home() {
 
       <Nave />
 
-      <div className='w-full h-screen bg-[#16161d] flex flex-wrap    '>
+      <div className='w-full h-screen bg-[#16161d] flex flex-wrap     '>
 
         <div className=' w-full h-[600px]   sm:w-[50%] sm:h-[100%] pt-[100px] pl-[20px] sm:pl-[70px]  '>
 
@@ -73,17 +73,7 @@ function Home() {
 
         <div className='w-[100%] sm:w-[50%] h-[500px] sm:h-[500px] flex justify-center sm:pt-[70px]   ' >
 
-          {/* <Swiper
-        modules={[Navigation,EffectFade]}
-        navigation
-        effect
-        speed={800}
-        slidesPerView={1}
-        loop
-        >
-
-        </Swiper> */}
-
+          
           <div   >
 
             <motion.img
