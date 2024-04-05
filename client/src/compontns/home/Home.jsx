@@ -43,9 +43,9 @@ function Home() {
 
       <Nave />
 
-      <div className='w-full h-screen bg-[#16161d] flex flex-wrap     '>
+      <div className='w-full min-h-screen bg-[#16161d] flex flex-wrap      '>
 
-        <div className=' w-full h-[600px]   sm:w-[50%] sm:h-[100%] pt-[100px] pl-[20px] sm:pl-[70px]  '>
+        <div className=' w-[100%] sm:w-[50%] h-[500px] pt-[100px] pl-[20px] sm:pl-[70px]  '>
 
           <motion.p
 
@@ -58,7 +58,7 @@ function Home() {
             }}
 
 
-            className='text-white text-[35px] sm:text-[40px] font-Poppins '>
+            className='text-white text-[30px] sm:text-[40px] font-Poppins '>
 
 
             Welcome to our Developer Community, where collaboration fuels innovation,
@@ -71,7 +71,7 @@ function Home() {
 
         </div>
 
-        <div className='w-[100%] sm:w-[50%] h-[500px] sm:h-[500px] flex justify-center sm:pt-[70px]   ' >
+        <div className='w-[100%] sm:w-[50%] h-[500px] flex justify-center pt-[100px] sm:pt-[70px]   ' >
 
           
           <div   >
@@ -95,9 +95,9 @@ function Home() {
 
 
         </div>
-
-
-      </div>
+        
+        
+        </div>
 
       <Service />
 
