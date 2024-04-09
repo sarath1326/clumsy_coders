@@ -84,7 +84,7 @@ function Service() {
      return (
         <div>
 
-            <div className='w-full min-h-screen bg-[#16161d]' >
+            <div className='w-full min-h-[500px] bg-[#16161d]' >
 
                 <div  className='w-full flex justify-around items-center ' >
 
@@ -96,7 +96,7 @@ function Service() {
                         
 
 
-                        className='w-[100px] sm:w-[500px] h-[5px] bg-yellow-300 rounded-lg'> </motion.div>
+                        className='w-[100px] sm:w-[500px] h-[3px] bg-yellow-300 rounded-lg'> </motion.div>
 
                     <h4 className='text-white font-Poppins text-center text-[20px] sm:text-[30px] ' > Our <span className='text-[#00C0FF]' > Services </span> </h4>
 
@@ -108,7 +108,7 @@ function Service() {
                         // whileInView={{ opacity: 1,x: 0 }}
                         // viewport={{ once: true }}
 
-                        className='w-[100px] sm:w-[500px] h-[5px] bg-yellow-300 rounded-lg'> </motion.div>
+                        className='w-[100px] sm:w-[500px] h-[3px] bg-yellow-300 rounded-lg'> </motion.div>
 
 
 
@@ -118,7 +118,7 @@ function Service() {
 
 
 
-                <div  ref={ref} className='w-full min-h-[600px]  flex justify-center items-center gap-5 flex-wrap mt-10 sm:mt-0 ' >
+                <div  ref={ref} className='w-full min-h-[600px]  flex justify-center items-center gap-20 flex-wrap mt-10 sm:mt-0 ' >
 
                     {
                         state.map((obj, index) => (

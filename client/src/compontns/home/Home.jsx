@@ -4,6 +4,9 @@ import React from 'react'
 import Nave from "../nave/Nave"
 import { motion } from "framer-motion"
 import Service from '../service/Service'
+import Projects from '../projects/Projects'
+import Team from '../team/Team'
+import Footer from '../footer/Footer'
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, EffectFade } from "swiper/modules"
 import "swiper/css";
@@ -64,7 +67,17 @@ function Home() {
             Welcome to our Developer Community, where collaboration fuels innovation,
             learning is endless, and freelancing opportunities abound!
 
+
+
           </motion.p>
+
+          <div className='w-[100%] flex  gap-3 flex-wrap' >
+
+            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
+
+            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
+
+          </div>
 
 
 
@@ -73,7 +86,7 @@ function Home() {
 
         <div className='w-[100%] sm:w-[50%] h-[500px] flex justify-center pt-[100px] sm:pt-[70px]   ' >
 
-          
+
           <div   >
 
             <motion.img
@@ -95,11 +108,17 @@ function Home() {
 
 
         </div>
-        
-        
-        </div>
+
+
+      </div>
 
       <Service />
+
+      <Projects />
+
+      <Team />
+
+      <Footer />
 
 
 
