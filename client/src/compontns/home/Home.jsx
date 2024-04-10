@@ -48,7 +48,7 @@ function Home() {
 
       <div className='w-full min-h-screen bg-[#16161d] flex flex-wrap      '>
 
-        <div className=' w-[100%] sm:w-[50%] h-[500px] pt-[100px] pl-[20px] sm:pl-[70px]  '>
+        <div className=' w-[100%] sm:w-[50%] h-[500px] pt-[50px] sm:pt-[100px] pl-[20px] sm:pl-[70px]  '>
 
           <motion.p
 
@@ -71,7 +71,7 @@ function Home() {
 
           </motion.p>
 
-          <div className='w-[100%] flex  gap-3 flex-wrap' >
+          <div className='w-[100%] flex  sm:gap-3 flex-wrap' >
 
             <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
