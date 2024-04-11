@@ -13,8 +13,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import image1 from "../../assets/image2r.png"
+import {useNavigate} from "react-router-dom"
 
 
 
@@ -41,6 +41,13 @@ const fadeAnimation = {
 }
 
 function Home() {
+
+
+  const navigate=useNavigate()
+
+
+
+
   return (
     <div>
 
@@ -73,7 +80,7 @@ function Home() {
 
           <div className='w-[100%] flex  sm:gap-3 flex-wrap' >
 
-            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
+            <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
             <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
 
@@ -108,6 +115,8 @@ function Home() {
 
 
         </div>
+
+        
 
 
       </div>

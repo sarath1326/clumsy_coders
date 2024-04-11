@@ -10,12 +10,16 @@ import team1 from "../../assets/team2.png"
 import { useState, useEffect } from 'react'
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import {useNavigate} from "react-router-dom"
 
 function Team() {
 
     const [triggerAnimation, setTriggerAnimation] = useState(false);
     const controls = useAnimation();
     const controls2 = useAnimation();
+
+
+    const navigate=useNavigate()
 
 
 
@@ -179,7 +183,7 @@ function Team() {
 
                         <div className='w-[100%] flex justify-center gap-3 flex-wrap' >
 
-                            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
+                            <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
                             <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
 
