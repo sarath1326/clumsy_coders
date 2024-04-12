@@ -5,7 +5,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 import {useNavigate} from "react-router-dom"
 
 
-function Model() {
+function Model(props) {
 
     const navigate=useNavigate()
 
@@ -66,7 +66,7 @@ function Model() {
                     </div>
 
 
-                    <h1 className='text-center font-Poppins text-[15px] mt-10' > we will check your profile and contact  </h1>
+                    <h1 className='text-center font-Poppins text-[15px] mt-10' > {props.msg}  </h1>
 
                     <div className='w-full flex justify-center items-center mt-[50px]' >
 

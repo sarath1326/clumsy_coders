@@ -1,12 +1,14 @@
 
 
+
+
 const nodemailer = require("nodemailer")
 const mailgen = require('mailgen');
 require("dotenv").config()
 
 
 
-const joinReqMail = (data) => {
+const contactmail = (data) => {
 
     
 
@@ -33,7 +35,7 @@ const joinReqMail = (data) => {
 
         let responces = {
             body: {
-                name:" New Join Request",
+                name:" New Contact",
 
                 intro: `
 
@@ -45,9 +47,9 @@ const joinReqMail = (data) => {
                    
                   Mobile: ${data.mobile} <br/>
                    
-                  Linkedin:  ${data.linkedin} <br/>
+                  message:  ${data.message} <br/>
 
-                  Github:${data.git}
+                 
                 
                 
                 `
@@ -64,7 +66,7 @@ const joinReqMail = (data) => {
 
             from: `${data.email}`,
             to: "sarathsarath93366@gmail.com",
-            subject: "Community Join Request ",
+            subject: "Clumsy Coders Contact ",
             html: mail
         };
 
@@ -91,7 +93,7 @@ const joinReqMail = (data) => {
 }
 
 
-module.exports = joinReqMail
+module.exports = contactmail
 
 
 

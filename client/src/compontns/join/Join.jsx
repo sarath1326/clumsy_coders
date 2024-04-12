@@ -9,6 +9,7 @@ import { validationSchema } from "./validation"
 import axios from "../../constant/axios"
 import Model from '../model/Model';
 import {message} from "antd"
+import Nave from "../nave/Nave"
 
 
 function Join() {
@@ -98,11 +99,13 @@ function Join() {
     return (
         <div>
 
+            <Nave />
+
             <div className='w-full h-screen bg-[#16161d] flex justify-center items-center'>
 
                 {
 
-                    pop && <Model />
+                    pop && <Model msg={"we will check your profile and contact"} />
 
                 }
 

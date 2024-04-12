@@ -82,7 +82,7 @@ function Home() {
 
             <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
-            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
+            <button onClick={()=>{navigate("/contact")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
 
           </div>
 

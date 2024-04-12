@@ -3,6 +3,7 @@
 const express=require("express");
 const router=express();
 const joinReqMail=require("../Email/joinmail")
+const contactMail=require("../Email/contact")
 
 router.post("/join",(req,res)=>{
 
@@ -15,6 +16,24 @@ router.post("/join",(req,res)=>{
          res.json({flag:false})
     })
 
+})
+
+router.post("/contact",(req,res)=>{
+
+
+    contactMail(req.body.values).then(()=>{
+
+        res.json({flag:true})
+
+         
+    }).catch(err=>{
+
+        res.json({flag:false})
+
+
+    })
+
+      
 })
 
 
