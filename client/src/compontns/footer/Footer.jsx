@@ -36,8 +36,8 @@ function Footer() {
 
           <div className='w-[100%] sm:w-[50%] h-[100px] flex items-center  gap-5 pl-7' >
 
-          <p onClick={()=>{navigate("/joincommunity")}}  className='font-Poppins font-medium cursor-pointer' > Join our Community </p> 
-          <p onClick={()=>{navigate("/projects")}} className='font-Poppins font-medium cursor-pointer' > Projects </p> 
+          {/* <p onClick={()=>{navigate("/joincommunity")}}  className='font-Poppins  cursor-pointer' > Join our Community </p>  */}
+          <p onClick={()=>{navigate("/projects")}} className='font-Poppins font-medium  cursor-pointer' > Projects </p> 
           <p onClick={()=>{navigate("/services")}} className='font-Poppins font-medium cursor-pointer' > Services </p>
 
           </div>

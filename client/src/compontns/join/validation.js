@@ -11,7 +11,7 @@ export const validationSchema = yup.object({
     email: yup.string().email(" *enter valide email id ").required(" *this filed is required"),
     mobile:yup.number().required("*this filed is required "),
     linkedin:yup.string().required("*this filed is required"),
-    git:yup.string().required("*required")
+    git:yup.string().required("*this filed is required")
 
 
     

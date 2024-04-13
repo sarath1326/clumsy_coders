@@ -59,7 +59,7 @@ function About() {
 
                         is a developers community. we have a
 
-                        storng techies in our background.create user-friendly and roubst softwaers.
+                        storng techies in our background.create user-friendly and roubst softwares.
 
                     </p>
 

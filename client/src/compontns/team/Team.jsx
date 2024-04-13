@@ -168,7 +168,7 @@ function Team() {
                         
                         className='w-[100%]  ' >
 
-                        <p className='text-white font-Poppins text-[20px] ml-7 sm:ml-0' > 
+                        <p className='text-white font-Poppins text-[20px] ml-7 sm:ml-0  ' > 
 
                         Teamwork is the heart of success, harmonizing individual efforts into 
                         a symphony of achievement. Together, we craft 
@@ -185,7 +185,7 @@ function Team() {
 
                         </p>
 
-                        <div className='w-[100%] flex justify-center gap-3 flex-wrap' >
+                        <div className='w-[100%] flex justify-center gap-2 flex-wrap' >
 
                             <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 

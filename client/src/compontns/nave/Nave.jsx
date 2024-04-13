@@ -21,6 +21,14 @@ function Nave() {
     const navigate=useNavigate()
 
 
+    const navigatefunc=(path)=>{
+ 
+        navigate(path)
+        setnav(false)
+
+    }
+
+
 
     // #00C0FF
 
@@ -139,7 +147,7 @@ function Nave() {
                             {
                                 navopt.map((obj, index) => (
 
-                                    <motion.span onClick={()=>{navigate(obj.path)}}
+                                    <motion.span onClick={()=>{navigatefunc(obj.path)}}
                                         initial={{ opacity: 0, y: -100 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.9 }}

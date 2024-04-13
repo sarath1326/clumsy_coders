@@ -7,13 +7,13 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { useFormik } from "formik"
 import { validationSchema } from "./validation"
 import axios from "../../constant/axios"
-import {message} from "antd"
+import { message } from "antd"
 import Model from '../model/Model';
 import { useState } from 'react';
 
 function Contact() {
 
-    const [pop,setpop]=useState(false)
+    const [pop, setpop] = useState(false)
 
 
     const initalValues = {
@@ -30,22 +30,22 @@ function Contact() {
         initialValues: initalValues,
         validationSchema: validationSchema,
 
-        onSubmit:(values)=>{
+        onSubmit: (values) => {
 
-            axios.post("/contact",{values}).then((respo)=>{
+            axios.post("/contact", { values }).then((respo) => {
 
-                  if(respo.data.flag){
+                if (respo.data.flag) {
 
                     setpop(true)
 
-                     
-                  }else{
 
-                      message.error("server error")
-                  }
-            }).catch(err=>{
+                } else {
 
-                 message.error("network error")
+                    message.error("server error")
+                }
+            }).catch(err => {
+
+                message.error("network error")
             })
 
         }
@@ -63,7 +63,7 @@ function Contact() {
             <div>
 
                 {
-                     pop && <Model msg={"we will contact you"} />
+                    pop && <Model msg={"we will contact you"} />
                 }
 
                 {/* <Nave /> */}
@@ -74,7 +74,7 @@ function Contact() {
 
 
 
-                        <div className='w-[400px] h-[400px] sm:w-[600px] pl-[50px] sm:pl-[100px] '  >
+                        <div className='w-[350px] h-[400px] sm:w-[600px] pl-[25px] sm:pl-[100px]  '  >
 
                             <h1 className='font-Poppins text-[25px] text-yellow-400 ' > Contact Us  </h1>
 
@@ -131,12 +131,12 @@ function Contact() {
 
                                 <label htmlFor="" className='text-[#00C0FF]' > Message </label><br />
 
-                                <textarea type="text" value={values.message}  name='message' onChange={handleChange} onBlur={handleBlur}
+                                <textarea type="text" value={values.message} name='message' onChange={handleChange} onBlur={handleBlur}
 
                                     placeholder='enter feel to free...' className='w-[300px] h-[100px] rounded-md text-start text-wrap' /><br />
 
                                 {
-                                    errors.message && touched.message?
+                                    errors.message && touched.message ?
 
                                         <><span className='text-red-600' > {errors.message} </span><br /></>
 
@@ -171,23 +171,33 @@ function Contact() {
                     <div className='w-[100%] sm:w-[50%] h-[550px] pt-[100px] sm:pt-[150px]  ' >
 
                         <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > slove your digital problems with us.  </p>
-                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > we have a experiensed developers community ! ! </p>
+                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > we have a experienced developers community ! ! </p>
 
-                        <div className='w-full flex gap-5 items-center mt-[50px]' >
+                        <div className='w-[100%] sm:flex gap-8 items-center mt-[100px] pl-[25px] sm:pl-0' >
 
-                            <div className='w-[30px] sm:w-[50px] h-[30px] sm:h-[50px] bg-yellow-400 rounded-full flex justify-center items-center' >
+                            <div className='flex items-center gap-3  mb-5 sm:mb-0' >
 
-                                <IoMail className='text-[20px] sm:text-[30px]' />
+                                <div className='w-[30px] sm:w-[50px] h-[30px] sm:h-[50px] bg-yellow-400 rounded-full flex justify-center items-center' >
 
-                            </div> <p className='text-[#00C0FF]' > Clumsycoders4u@gmail.com </p>
+                                    <IoMail className='text-[20px] sm:text-[30px]' />
 
-                            <div className='w-[30px] sm:w-[50px] h-[30px] sm:h-[50px] bg-yellow-400 rounded-full flex justify-center items-center' >
+                                </div> <p className='text-[#00C0FF]' > Clumsycoders4u@gmail.com </p>
 
-                                <IoLogoWhatsapp className='text-[20px] sm:text-[30px]' />
 
                             </div>
 
-                            <p className='text-[#00C0FF]' > 7592831937 </p>
+                            <div className='flex items-center gap-3' >
+
+                                <div className='w-[30px] sm:w-[50px] h-[30px] sm:h-[50px] bg-yellow-400 rounded-full flex justify-center items-center' >
+
+                                    <IoLogoWhatsapp className='text-[20px] sm:text-[30px]' />
+
+                                </div>
+
+                                <p className='text-[#00C0FF]' > 7592831937 </p>
+
+
+                            </div>
 
 
 
