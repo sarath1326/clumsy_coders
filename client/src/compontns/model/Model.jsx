@@ -53,15 +53,15 @@ function Model(props) {
 
                 </div> */}
 
-                <div className='w-[550px] h-[300px] bg-white border-2 border-black rounded-xl' >
+                <div className=' w-[300px] h-[230px] sm:w-[550px] sm:h-[300px] bg-white border-2 border-black rounded-xl' >
 
-                    <div className=' w-full flex items-center mt-[100px] justify-center gap-3' >
+                    <div className=' w-full flex items-center mt-[30px] sm:mt-[100px] justify-center gap-3' >
 
 
-                        <h1 className=' font-Poppins text-[20px] text-green-600 ' >
+                        <h1 className=' font-Poppins text-[13px] sm:text-[20px] text-green-600 ' >
                             your detailes successfuly submited  </h1>
 
-                        <IoCheckmarkCircleSharp className='text-[30px] text-green-600' />
+                        <IoCheckmarkCircleSharp className=' text-[18px] sm:text-[30px] text-green-600' />
 
                     </div>
 

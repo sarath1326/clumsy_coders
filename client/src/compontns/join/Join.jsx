@@ -8,14 +8,16 @@ import { useState, useEffect } from 'react';
 import { validationSchema } from "./validation"
 import axios from "../../constant/axios"
 import Model from '../model/Model';
-import {message} from "antd"
+import { message } from "antd"
 import Nave from "../nave/Nave"
+import { ThreeDots } from 'react-loader-spinner'
 
 
 function Join() {
 
     axios.defaults.withCredentials = true;
     const [pop, setpop] = useState(false)
+    const [spinner, setspinner] = useState(false)
 
     const initalValues = {
 
@@ -34,21 +36,26 @@ function Join() {
 
         onSubmit: (values) => {
 
+            setspinner(true)
+
             axios.post("/join", { values }).then((respo) => {
 
                 if (respo.data.flag) {
 
                     setpop(true)
+                    setspinner(false)
 
                 } else {
 
-                   message.error("server error !")
+                    message.error("server error !")
+                    setspinner(false)
                 }
 
 
             }).catch(err => {
 
                 message.error("network error !")
+                setspinner(false)
             })
 
 
@@ -190,7 +197,43 @@ function Join() {
                                     : <br />
                             }
 
-                            <button type='submit' className='w-[130px] h-[30px] bg-[#00C0FF] rounded-md font-medium ml-20 mt-7 ' > Submit </button>
+                            <div className=' w-[100%] flex justify-center items-center' >
+
+                                <button type='submit' className='w-[130px] h-[40px] bg-[#00C0FF] rounded-md font-medium text-center  mt-7 ' >
+
+                                    {
+
+                                        spinner ?
+
+                                            <div className='ml-[50px]' >
+
+                                                <ThreeDots
+                                                    visible={true}
+                                                    height="30"
+                                                    width="30"
+                                                    color="#003C43"
+                                                    radius="9"
+                                                    ariaLabel="three-dots-loading"
+                                                    wrapperStyle={{}}
+                                                    wrapperClass=""
+                                                />
+
+                                            </div>
+
+
+
+                                            :
+
+                                            " Submit "
+
+
+                                    }
+
+                                </button>
+
+
+                            </div>
+
 
 
 

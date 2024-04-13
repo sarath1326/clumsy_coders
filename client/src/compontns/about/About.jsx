@@ -6,6 +6,7 @@ import { motion, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer';
 import { useState, useEffect } from 'react';
 
+
 function About() {
 
     const navigate = useNavigate()

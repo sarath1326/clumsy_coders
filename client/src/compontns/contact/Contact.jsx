@@ -10,10 +10,12 @@ import axios from "../../constant/axios"
 import { message } from "antd"
 import Model from '../model/Model';
 import { useState } from 'react';
+import { ThreeDots } from 'react-loader-spinner'
 
 function Contact() {
 
     const [pop, setpop] = useState(false)
+    const [spinner, setspinner] = useState(false)
 
 
     const initalValues = {
@@ -32,20 +34,25 @@ function Contact() {
 
         onSubmit: (values) => {
 
+            setspinner(true)
+
             axios.post("/contact", { values }).then((respo) => {
 
                 if (respo.data.flag) {
 
                     setpop(true)
+                    setspinner(false)
 
 
                 } else {
 
                     message.error("server error")
+                    setspinner(false)
                 }
             }).catch(err => {
 
                 message.error("network error")
+                setspinner(false)
             })
 
         }
@@ -144,7 +151,38 @@ function Contact() {
 
                                 }
 
-                                <button className='w-[100px] h-[30px] bg-yellow-400 font-medium rounded-md' > Submit </button>
+
+                                <button className='w-[100px] h-[30px] bg-yellow-400 font-medium rounded-md' >
+
+                                    {
+
+                                        spinner ?
+
+                                            <div className='ml-[35px]' >
+
+                                                <ThreeDots
+                                                    visible={true}
+                                                    height="30"
+                                                    width="30"
+                                                    color="#003C43"
+                                                    radius="9"
+                                                    ariaLabel="three-dots-loading"
+                                                    wrapperStyle={{}}
+                                                    wrapperClass=""
+                                                />
+
+                                            </div>
+
+
+
+                                            :
+
+                                            " Submit "
+
+
+                                    }
+
+                                </button>
 
 
 
