@@ -66,7 +66,7 @@ function Contact() {
                      pop && <Model msg={"we will contact you"} />
                 }
 
-                <Nave />
+                {/* <Nave /> */}
 
                 <div className='w-full min-h-[600px]  bg-[#16161d] flex flex-wrap'>
 
@@ -98,7 +98,7 @@ function Contact() {
                                 <label htmlFor="" className='text-[#00C0FF]'> Email </label><br />
 
                                 <input type="email" value={values.email} name='email' onChange={handleChange} onBlur={handleBlur}
-                                    placeholder='your email' className='w-[300px] h-[40px] rounded-lg' /><br />
+                                    placeholder='your email id' className='w-[300px] h-[40px] rounded-lg' /><br />
 
                                 {
                                     errors.email && touched.email ?
@@ -131,9 +131,9 @@ function Contact() {
 
                                 <label htmlFor="" className='text-[#00C0FF]' > Message </label><br />
 
-                                <input type="text" value={values.message}  name='message' onChange={handleChange} onBlur={handleBlur}
+                                <textarea type="text" value={values.message}  name='message' onChange={handleChange} onBlur={handleBlur}
 
-                                    placeholder='enter feel to free' className='w-[300px] h-[100px] rounded-md text-start text-wrap' /><br />
+                                    placeholder='enter feel to free...' className='w-[300px] h-[100px] rounded-md text-start text-wrap' /><br />
 
                                 {
                                     errors.message && touched.message?
@@ -170,8 +170,8 @@ function Contact() {
 
                     <div className='w-[100%] sm:w-[50%] h-[550px] pt-[100px] sm:pt-[150px]  ' >
 
-                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > slove your digital probelems with us.  </p>
-                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > we have experiensed developers community ! ! </p>
+                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > slove your digital problems with us.  </p>
+                        <p className='text-yellow-400 text-[20px] sm:text-[30px] ml-7 sm:ml-0' > we have a experiensed developers community ! ! </p>
 
                         <div className='w-full flex gap-5 items-center mt-[50px]' >
 

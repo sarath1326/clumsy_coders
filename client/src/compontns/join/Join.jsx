@@ -99,7 +99,7 @@ function Join() {
     return (
         <div>
 
-            <Nave />
+            {/* <Nave /> */}
 
             <div className='w-full h-screen bg-[#16161d] flex justify-center items-center'>
 

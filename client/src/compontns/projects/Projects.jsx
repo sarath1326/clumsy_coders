@@ -110,14 +110,14 @@ function Projects() {
 
 
 
-                    <motion.div
+                   <a href="https://donor-sync-com.onrender.com/"> <motion.div
                         style={{ backgroundImage: `url(${proimg})` }}
                         initial={{ opacity: 0, y: 100 }}
                         animate={controls}
                         className="w-[250px] h-[270px] bg-cover bg-center   rounded-lg mt-0 border-2  border-[#00C0FF] hover:border-yellow-300" >
                         {/* style={{backgroundImage:`url(${proimg})`}} */}
 
-                    </motion.div>
+                    </motion.div> </a>
 
                     <motion.div
                         initial={{ opacity: 0, y: 100 }}

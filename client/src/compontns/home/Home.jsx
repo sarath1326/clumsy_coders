@@ -51,7 +51,7 @@ function Home() {
   return (
     <div>
 
-      <Nave />
+      {/* <Nave /> */}
 
       <div className='w-full min-h-screen bg-[#16161d] flex flex-wrap      '>
 

@@ -168,10 +168,14 @@ function Team() {
                         
                         className='w-[100%]  ' >
 
-                        <p className='text-white font-Poppins text-[20px] ml-7 sm:ml-0' > Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at fuga sapiente,
-                            harum eligendi quia a est, repellat minus eum quos
-                            officiis ipsa ipsam vitae placeat, alias ut.
-                            Blanditiis, laudantium. </p>
+                        <p className='text-white font-Poppins text-[20px] ml-7 sm:ml-0' > 
+
+                        Teamwork is the heart of success, harmonizing individual efforts into 
+                        a symphony of achievement. Together, we craft 
+                        a masterpiece of innovation and resilience, weaving 
+                        a story of triumph with every collaborative note.
+                        
+                         </p>
 
                         <p className='text-center text-[60px] font-Poppins sm:mt-10   ' >
                             <span className='font-Poppins text-white' > 10 </span>
@@ -185,7 +189,7 @@ function Team() {
 
                             <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
-                            <button className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
+                            <button onClick={()=>{navigate("/contact")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
 
                         </div>
 

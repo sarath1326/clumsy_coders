@@ -5,17 +5,20 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from 'react';
 import { motion } from "framer-motion"
+import { useNavigate } from 'react-router-dom';
 
 
 function Nave() {
 
     const [nav, setnav] = useState(false)
     const [navopt, setnavopt] = useState([
-        { text: "Home" },
-        { text: "About" },
-        { text: "Projects" },
-        { text: "Contact" }
+        { text: "Home" ,path:"/"},
+        { text: "About",path:"/about" },
+        { text: "Projects" ,path:"/projects"},
+        { text: "Contact",path:"/contact" }
     ])
+
+    const navigate=useNavigate()
 
 
 
@@ -65,7 +68,7 @@ function Nave() {
                             {
                                 navopt.map((obj, index) => (
 
-                                    <motion.span
+                                    <motion.span onClick={()=>{navigate(obj.path)}}
                                         initial={{ opacity: 0, x: -100 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.3 }}
@@ -136,7 +139,7 @@ function Nave() {
                             {
                                 navopt.map((obj, index) => (
 
-                                    <motion.span
+                                    <motion.span onClick={()=>{navigate(obj.path)}}
                                         initial={{ opacity: 0, y: -100 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.9 }}

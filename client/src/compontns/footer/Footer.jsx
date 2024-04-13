@@ -5,8 +5,11 @@ import React from 'react'
 import { IoMail } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
 
 function Footer() {
+
+  const navigate=useNavigate()
 
   return (
     <div>
@@ -25,7 +28,7 @@ function Footer() {
           </p>
 
         </div>
-        <p className='font-Poppins text-[13px] ml-7' > solve your digital probelems  </p>
+        <p className='font-Poppins text-[13px] ml-7' > solve your digital problems  </p>
 
        
 
@@ -33,7 +36,9 @@ function Footer() {
 
           <div className='w-[100%] sm:w-[50%] h-[100px] flex items-center  gap-5 pl-7' >
 
-          <p> Join our Community </p> <p> Projects </p> <p> Services </p>
+          <p onClick={()=>{navigate("/joincommunity")}}  className='font-Poppins font-medium cursor-pointer' > Join our Community </p> 
+          <p onClick={()=>{navigate("/projects")}} className='font-Poppins font-medium cursor-pointer' > Projects </p> 
+          <p onClick={()=>{navigate("/services")}} className='font-Poppins font-medium cursor-pointer' > Services </p>
 
           </div>
           
@@ -45,11 +50,13 @@ function Footer() {
 
             <div>
 
-          <div className='flex items-center gap-3 mb-3' > <IoMail className='text-[20px]' /> <span className='font-Poppins text-[15px]' >clumsycoder4u@gmail.com </span> </div>  
+          <div className='flex items-center gap-3 mb-3' > 
+          <IoMail className='text-[20px]' /> 
+          <span className='font-Poppins text-[15px]' >clumsycoder4u@gmail.com </span> </div>  
            
            <FaPhone className='text-[20px] mb-3' />
             
-            <FaGithub className='text-[20px]' />
+          <a href="https://github.com/clumsy-coders-org"> <FaGithub className='text-[20px]' />    </a>  
 
             </div>
 
