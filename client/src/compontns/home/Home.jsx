@@ -82,7 +82,7 @@ function Home() {
 
             <button onClick={()=>{navigate("/joincommunity")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Join Our Community </button>
 
-            <button onClick={()=>{navigate("/contact")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
+            <button onClick={()=>{console.log("contact")}} className=' w-[200px] h-[40px] font-semibold bg-yellow-400 text-black mt-8 rounded-lg ' > Contact Us </button>
 
           </div>
 
@@ -91,7 +91,7 @@ function Home() {
 
         </div>
 
-        <div className='w-[100%] sm:w-[50%] h-[500px] flex justify-center pt-[100px] sm:pt-[70px]   ' >
+        <div className='w-[100%] sm:w-[50%] h-[500px] flex justify-center pt-[100px]  mt-[50px] sm:mt-0  sm:pt-[70px]   ' >
 
 
           <div   >
