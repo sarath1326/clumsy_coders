@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(cors({
-      origin: ["https://clumsy-coders.onrender.com"],
+      origin: ["http://localhost:3000"],
       methods: ["GET", "POST"],
       credentials: true
 }));

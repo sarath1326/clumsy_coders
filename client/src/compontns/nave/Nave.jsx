@@ -71,7 +71,7 @@ function Nave() {
                     {/* nave option div lapview */}
                     <div className='hidden sm:block' >
 
-                        <div className='flex gap-20 ml-[200px] font-Poppins text-[15px]'>
+                        <div className='flex gap-20 ml-[200px] font-Poppins text-[15px] '>
 
                             {
                                 navopt.map((obj, index) => (
@@ -94,6 +94,8 @@ function Nave() {
 
                                 ))
                             }
+
+                            {/* <span> Open Source </span> */}
 
 
 
