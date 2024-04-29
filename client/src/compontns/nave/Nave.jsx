@@ -12,18 +12,18 @@ function Nave() {
 
     const [nav, setnav] = useState(false)
     const [navopt, setnavopt] = useState([
-        { text: "Home" ,path:"/"},
-        { text: "About",path:"/about" },
-        { text: "Projects" ,path:"/projects"},
-        { text: "Contact",path:"/contact" },
-        
+        { text: "Home", path: "/" },
+        { text: "About", path: "/about" },
+        { text: "Projects", path: "/projects" },
+        { text: "Contact", path: "/contact" },
+
     ])
 
-    const navigate=useNavigate()
+    const navigate = useNavigate()
 
 
-    const navigatefunc=(path)=>{
- 
+    const navigatefunc = (path) => {
+
         navigate(path)
         setnav(false)
 
@@ -70,7 +70,7 @@ function Nave() {
                     </div>
 
                     {/* nave option div lapview */}
-                    
+
                     <div className='hidden sm:block'>
 
                         <div className='flex gap-20 ml-[100px] font-Poppins text-[15px]  '>
@@ -78,15 +78,15 @@ function Nave() {
                             {
                                 navopt.map((obj, index) => (
 
-                                    <motion.span onClick={()=>{navigate(obj.path)}}
+                                    <motion.span onClick={() => { navigate(obj.path) }}
                                         initial={{ opacity: 0, x: -100 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.3 }}
                                         whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{once:true}}
-                                        
-                                       
-                                        
+                                        viewport={{ once: true }}
+
+
+
 
                                         className='cursor-pointer hover:text-red-600' >
 
@@ -97,7 +97,7 @@ function Nave() {
                                 ))
                             }
 
-                            <span onClick={()=>{navigate("/openSource")}} className=' bg-yellow-300 text-black p-[3px] rounded-md cursor-pointer font-Poppins  ' > Open Source </span>
+                            <span onClick={() => { navigate("/openSource") }} className=' bg-yellow-300 text-black p-[3px] rounded-md cursor-pointer font-Poppins  ' > Open Source </span>
 
 
 
@@ -151,7 +151,7 @@ function Nave() {
                             {
                                 navopt.map((obj, index) => (
 
-                                    <motion.span onClick={()=>{navigatefunc(obj.path)}}
+                                    <motion.span onClick={() => { navigatefunc(obj.path) }}
                                         initial={{ opacity: 0, y: -100 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.9 }}
@@ -164,6 +164,19 @@ function Nave() {
 
                                 ))
                             }
+
+                            <motion.span 
+                                initial={{ opacity: 0, y: -100 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.9 }}
+
+                                className='cursor-pointe bg-[#00C0FF] p-[3px] rounded-md ' >
+
+                                Open Source
+
+                            </motion.span>
+
+
 
 
                         </div>
