@@ -30,6 +30,7 @@ function Viewproject() {
             } else {
 
                 message.error("server error")
+                console.log(result.msg)
                 setloding(false)
             }
         }).catch(err => {

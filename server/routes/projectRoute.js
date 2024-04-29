@@ -52,7 +52,7 @@ router.get("/allprojects", async (req, res) => {
     
     }).catch(err => {
 
-        res.json({flag:false})
+        res.json({flag:false,msg:err})
     })
 
 })
