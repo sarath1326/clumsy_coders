@@ -5,6 +5,12 @@ const router=express();
 const joinReqMail=require("../Email/joinmail")
 const contactMail=require("../Email/contact")
 
+
+
+
+// join post router
+
+
 router.post("/join",(req,res)=>{
 
 
@@ -17,6 +23,8 @@ router.post("/join",(req,res)=>{
     })
 
 })
+
+// contact post router
 
 router.post("/contact",(req,res)=>{
 
@@ -35,6 +43,9 @@ router.post("/contact",(req,res)=>{
 
       
 })
+
+
+
 
 
 

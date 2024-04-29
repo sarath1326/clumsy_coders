@@ -3,7 +3,11 @@
 const express = require("express");
 const app = express();
 const router = require("./routes/router");
+const projectRoute=require("./routes/projectRoute")
 const cors = require("cors");
+const DB=require("./Model/connect")
+
+
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -18,8 +22,23 @@ app.use(cors({
 // "https://clumsy-coders.onrender.com"
 
 
+// DB connecting func
 
-app.use("/", router);
+DB()
+
+
+
+// contact and join route
+
+app.use("/", router);   
+
+
+
+// open source route
+
+app.use("/opensource",projectRoute)
+
+
 
 
 

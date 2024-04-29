@@ -15,7 +15,8 @@ function Nave() {
         { text: "Home" ,path:"/"},
         { text: "About",path:"/about" },
         { text: "Projects" ,path:"/projects"},
-        { text: "Contact",path:"/contact" }
+        { text: "Contact",path:"/contact" },
+        
     ])
 
     const navigate=useNavigate()
@@ -50,7 +51,7 @@ function Nave() {
 
                 </div>
 
-                <div className='w-[50%] h-[100%] flex items-center    '>
+                <div className='w-[50%] h-[100%] flex items-center     '>
 
                     {/* hambarger button div */}
                     <div className=' sm:hidden  w-[100%] h-[100%]  flex justify-end items-center pr-10 ' >
@@ -69,9 +70,10 @@ function Nave() {
                     </div>
 
                     {/* nave option div lapview */}
-                    <div className='hidden sm:block' >
+                    
+                    <div className='hidden sm:block'>
 
-                        <div className='flex gap-20 ml-[200px] font-Poppins text-[15px] '>
+                        <div className='flex gap-20 ml-[100px] font-Poppins text-[15px]  '>
 
                             {
                                 navopt.map((obj, index) => (
@@ -95,7 +97,7 @@ function Nave() {
                                 ))
                             }
 
-                            {/* <span> Open Source </span> */}
+                            <span onClick={()=>{navigate("/openSource")}} className=' bg-yellow-300 text-black p-[3px] rounded-md cursor-pointer font-Poppins  ' > Open Source </span>
 
 
 
