@@ -16,6 +16,8 @@ function Viewproject() {
     const [loding, setloding] = useState(true)
     const [data, setdata] = useState()
 
+    axios.defaults.withCredentials = true;
+
 
     useEffect(() => {
 
