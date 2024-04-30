@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(cors({
-      origin: ["https://clumsy-coders.onrender.com"],
+      origin: [ "https://clumsy-coders.onrender.com" ],
       methods: ["GET", "POST"],
       credentials: true
 }));

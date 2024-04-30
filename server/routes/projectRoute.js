@@ -27,7 +27,7 @@ router.post("/addnewproject", async (req, res) => {
 
         })
 
-        final.save().then(() => {
+        await final.save().then(() => {
 
             res.json({ flag: true })
         })
@@ -46,14 +46,31 @@ router.post("/addnewproject", async (req, res) => {
 
 router.get("/allprojects", async (req, res) => {
 
-    projectModel.find().then((respo) => {
+    try {
 
-        res.json({flag:true,data:respo})
+        let data= await projectModel.find()
+
+        console.log(data)
+
+        res.json({flag:true,data:data})
+
+    } catch (error) {
+
+        res.json({flag:false,msg:error})
+
+    }
+
+
+
+    // await projectModel.find().then((respo) => {
+
+    //     res.json({ flag: true, data: respo })
+
+    // }).catch(err => {
+
+    //     res.json({ flag: false, msg: err })
     
-    }).catch(err => {
-
-        res.json({flag:false,msg:err})
-    })
+    // })
 
 })
 
