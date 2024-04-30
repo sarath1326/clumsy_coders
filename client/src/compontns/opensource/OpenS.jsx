@@ -20,13 +20,17 @@ function OpenS() {
 
                 <div className=' w-[100%] sm:w-[50%] h-[700px] sm:h-[500px] sm:pt-[100px]  pl-[50px] pt-[70px]  ' >
 
-                    <h1 className='text-[30px] text-white font-Poppins ' > Open Source  </h1>
+                    <h1 className=' text-[25px] sm:text-[30px] text-white font-Poppins ' > Open Source  </h1>
 
                     <p className='font-Poppins text-yellow-400 mt-[50px] text-[20px]' >
 
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
-                        consequuntur similique corporis inventore incidunt optio ad temporibus,
-                        enim reprehenderit quam perspiciatis sequi nesciunt perferendis soluta. Repudiandae, mollitia! Obcaecati, id sapiente! </p>
+                    Open source projects are more than just software—they represent a global community 
+                    driving innovation and collaboration. From transparency to customization, 
+                    open source empowers us to create, learn, and build 
+                    together. Let's celebrate the spirit of openness and 
+                    join the movement for a more inclusive and innovative digital future!
+
+                         </p>
 
                     <button onClick={() => { navigate("/viewproject") }} className=' w-[200px] h-[40px] font-semibold bg-[#00C0FF] text-black mt-14 rounded-lg mr-5 ' > Projects </button>
 
