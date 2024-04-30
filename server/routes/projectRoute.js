@@ -8,7 +8,8 @@ const projectModel = require("../Model/projectModel")
 
 
 
-router.post("/addnewproject", async (req, res) => {
+
+router.post("/addnewproject", async (req, res)=> {
 
     let { data, tools } = req.body
 
@@ -44,33 +45,22 @@ router.post("/addnewproject", async (req, res) => {
 })
 
 
-router.get("/allprojects", async (req, res) => {
-
-    try {
-
-        let data= await projectModel.find()
-
-        console.log(data)
-
-        res.json({flag:true,data:data})
-
-    } catch (error) {
-
-        res.json({flag:false,msg:error})
-
-    }
+router.get("/allprojects", async (req, res)=> {
 
 
+    projectModel.find().then((respo) => {
 
-    // await projectModel.find().then((respo) => {
+        res.json({ flag: true, data: respo })
 
-    //     res.json({ flag: true, data: respo })
 
-    // }).catch(err => {
+    }).catch(err => {
 
-    //     res.json({ flag: false, msg: err })
-    
-    // })
+
+        res.json({ flag: false })
+
+
+    })
+
 
 })
 
