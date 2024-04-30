@@ -24,13 +24,11 @@ function OpenS() {
 
                     <p className='font-Poppins text-yellow-400 mt-[50px] text-[20px]' >
 
-                    Open source projects are more than just software—they represent a global community 
-                    driving innovation and collaboration. From transparency to customization, 
-                    open source empowers us to create, learn, and build 
-                    together. Let's celebrate the spirit of openness and 
-                    join the movement for a more inclusive and innovative digital future!
-
-                         </p>
+                        Open source projects go beyond software; they're a global community fostering innovation and
+                        collaboration. With transparency and customization, open source enables us
+                        to create, learn, and build together. Let's embrace openness and
+                        support a more inclusive, innovative digital future!
+                    </p>
 
                     <button onClick={() => { navigate("/viewproject") }} className=' w-[200px] h-[40px] font-semibold bg-[#00C0FF] text-black mt-14 rounded-lg mr-5 ' > Projects </button>
 
